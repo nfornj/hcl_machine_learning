@@ -1,12 +1,14 @@
 version: '3'
 services:
   notebook:
-    container_name: python_notebook
+    image: jupyter_notebook
+    container_name: jupter_notebook_anbu
     labels:
       description: Python 3 using Jupyter Notebooks
-      name: jupyter notebook 
+      name: jupyter notebook
     ports:
-      - "8888:8888"
+      - "4321:4321"
     volumes:
-      - ~/Documents/notebooks:/src/notebooks
-    build: . 
+      - ~/Jupyter_Docker/notebooks:/src/notebooks
+    build:
+         .
